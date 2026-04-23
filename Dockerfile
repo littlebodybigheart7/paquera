@@ -1,14 +1,22 @@
-FROM openjdk:17-jdk-alpine
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
 COPY pom.xml .
+RUN mvn dependency:go-offline -B
+
 COPY src ./src
-COPY mvnw .
-COPY .mvn .mvn
+RUN mvn clean package -DskipTests
 
-RUN chmod 777 mvnw
+# ── Etapa 2: Imagem final leve ────────────────────────
+FROM eclipse-temurin:17-jre-jammy
 
-RUN ./mvnw package --aq vai compilar
+WORKDIR /app
 
-CMD ["java", "-jar","target/aula1/target/aula1-0.0.1-SNAPSHOT.jar"]
+# Nome do JAR bate com artifactId + version do pom.xml
+COPY --from=build /app/target/aula1-0.0.1-SNAPSHOT.jar app.jar
+
+# O Render sobrescreve PORT via env var; EXPOSE é apenas documentação
+EXPOSE 8081
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
