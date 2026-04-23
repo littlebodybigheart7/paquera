@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <title>Projeto JAVA 2</title>
+    <link rel="stylesheet" th:href="@{css/index.css}">
+    <script th:src="@{js/index.js}"></script>
+</head>
+<body>
+    <h1>Castiel</h1>
+    <p> <span id="home">Castiel page</span> | <a th:href="@{/p1}">Lysandre page</a> | <a th:href="@{/p2}">Armin page</a> | <a th:href="@{/formpaquera}">Cadastrar Paquera</a> </p>
+    <img th:src="@{img/castiel.png}" alt="Castiel divo">
+    <button onclick="ola()">
+        OK
+    </button>
+  
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro de Paqueras</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form action="#" th:action="@{/Paquera}" method=post th:object="${Paquera}">
+    	Nome: <input type="text" th:field="*{nome}"><br>
+        Idade: <input type="text" th:field="*{idade}">
+    	<input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+    font-family: monospace,'Roboto Mono', 'Segoe UI';
+    font-size: 18px;
+    background-color: darkblue;
+    margin: 100px;
+    cursor: pointer;
+
+}
+
+h1{
+    font-size: 30px;  
+    color: blue;
+    background-color: paleturquoise;
+    width: 50%;
+    color: darkblue;
+}
+
+h1:hover{
+    width: 25%;
+    transition: width 2s;
+
+}
+
+img{
+    width: 200px;
+}
+
+a{
+    color: paleturquoise;
+    font-weight: bold;
+}
+
+a:hover{
+    color: blue;
+    text-decoration: underline;
+
+}

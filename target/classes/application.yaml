@@ -1,0 +1,14 @@
+server:
+  # O Render injeta a variável PORT automaticamente; fallback local 8081
+  port: ${PORT:8081}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://dpg-d7gmfu77f7vs73a83cf0-a.singapore-postgres.render.com:5432/auladb_gn7u
+    username: adm
+    password: wUDA7o42br9P2HZUaUfbjIQPEseUhZRw
+    driver-class-name: org.postgresql.Driver
+
+sql:
+    init:
+      mode: never
