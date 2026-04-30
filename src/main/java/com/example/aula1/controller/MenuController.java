@@ -43,4 +43,10 @@ public class MenuController {
         paqueraService.inserirPaquera(paquera);
         return "sucesso";
     }
+
+    @GetMapping("/paqueras")
+    public String listarPaqueras(Model model) {
+        model.addAttribute("paqueras", paqueraService.listarPaqueras());
+        return "paqueras";
+    }
 }
