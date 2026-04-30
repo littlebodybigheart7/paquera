@@ -9,6 +9,11 @@ spring:
     password: wUDA7o42br9P2HZUaUfbjIQPEseUhZRw
     driver-class-name: org.postgresql.Driver
 
-sql:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  sql:
     init:
       mode: always
+      schema-locations: classpath:schema-postgresql.sql
