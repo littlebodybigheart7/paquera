@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d7gmfu77f7vs73a83cf0-a.singapore-postgres.render.com:5432/auladb_gn7u
+    url: jdbc:postgresql://dpg-d7gmfu77f7vs73a83cf0-a.singapore-postgres.render.com:5432/auladb_gn7u?sslmode=require
     username: adm
     password: wUDA7o42br9P2HZUaUfbjIQPEseUhZRw
     driver-class-name: org.postgresql.Driver
