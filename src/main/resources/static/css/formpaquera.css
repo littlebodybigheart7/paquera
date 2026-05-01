@@ -23,11 +23,11 @@ img{
 }
 
 p{
-    color: pink;
+    color: #f55083;
     background-color: white;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
-    width: 50%;
+    width: 40%;
 }
 
 a{
