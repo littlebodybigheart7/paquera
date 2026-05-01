@@ -6,7 +6,7 @@
     <script th:src="@{js/index.js}"></script>
 </head>
 <body>
-    <h1> Paqueras</h1>
+    <h1>Paqueras Cadastrados</h1>
     <p> <span id="home">Castiel page</span> | <a th:href="@{/p1}">Lysandre page</a> | <a th:href="@{/p2}">Armin page</a> | <a th:href="@{/formpaquera}">Cadastrar Paquera</a> 
     | <a th:href="@{/paqueras}">Paqueras Cadastrados </a> </p>
     <table th:if="${not #lists.isEmpty(paqueras)}">
@@ -23,7 +23,5 @@
             </tr>
         </tbody>
     </table>
-
-    <p class="vazio" th:if="${#lists.isEmpty(paqueras)}">Nenhuma paquera cadastrada ainda. 😢</p>
 </body>
 </html>
