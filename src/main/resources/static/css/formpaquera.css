@@ -1,7 +1,7 @@
 body {
     font-family: monospace, 'Roboto Mono', 'Segoe UI';
     font-size: 18px;
-    margin: 20px;
+    margin: 100px;
     cursor: pointer;
     background-image: url(../img/parque.jpg);
 }
