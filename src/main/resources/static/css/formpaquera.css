@@ -23,7 +23,8 @@ img{
 }
 
 p{
+    color: pink;
+    background-color: palevioletred;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
-    color: palevioletred;
     font-weight: bold;
 }
