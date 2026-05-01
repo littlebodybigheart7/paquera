@@ -58,3 +58,7 @@ caption, th, td {
 tbody tr:hover{
     background-color: #EBE8ED;
 }
+ 
+tr.cor, p.cor {
+    background-color: rgb(255, 225, 230);
+}
