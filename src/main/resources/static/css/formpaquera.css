@@ -4,9 +4,6 @@ body {
     margin: 20px;
     cursor: pointer;
     background-image: url(../img/onibus-amor-doce.webp);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 h1{
@@ -14,13 +11,11 @@ h1{
     color: pink;
     background-color: palevioletred;
     width: 50%;
-    color: #f55083
 }
 
 h1:hover{
     width: 25%;
     transition: width 2s;
-
 }
 
 img{
