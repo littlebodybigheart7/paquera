@@ -25,13 +25,13 @@ img{
 
 a{
     color: pink;
-    background-color: palevioletred;
+    background-color: white;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
 }
 
 a:hover{
-    color: pink;
+    color: #f55083;
     text-decoration: underline;
 
 }
