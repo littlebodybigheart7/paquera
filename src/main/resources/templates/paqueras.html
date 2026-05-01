@@ -14,12 +14,18 @@
             <tr>
                 <th>Nome</th>
                 <th>Idade</th>
+                <th>Signo</th>
+                <th>Gosta de</th>
+                <th>Não gosta de</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="p : ${paqueras}">
                 <td th:text="${p.nome}">Nome</td>
                 <td th:text="${p.idade}">Idade</td>
+                <td th:text="${p.signo}">Signo</td>
+                <td th:text="${p.gostaDe}">Gosta de</td>
+                <td th:text="${p.naoGostaDe}">Não gosta de</td>
             </tr>
         </tbody>
     </table>
