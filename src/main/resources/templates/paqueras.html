@@ -36,7 +36,7 @@
 
     <td>
         <a th:href="@{/editar/{id}(id=${p.id})}">
-            <button type="button">✏️ Editar</button>
+            <button type="button">✏️ Editar</button><br>
         </a>
 
         <form th:action="@{/deletar/{id}(id=${p.id})}" method="post" style="display:inline;">
