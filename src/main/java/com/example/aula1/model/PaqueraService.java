@@ -13,7 +13,11 @@ public class PaqueraService {
 
     // CREATE ou UPDATE
     public void salvar(Paquera paquera) {
-        paqueraDAO.inserirPaquera(paquera);
+        if (paquera.getId() == null || paquera.getId().isEmpty()) {
+            paqueraDAO.inserirPaquera(paquera);
+        } else {
+            paqueraDAO.atualizarPaquera(paquera);
+        }
     }
 
     // DELETE
