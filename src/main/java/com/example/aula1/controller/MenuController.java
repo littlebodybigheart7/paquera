@@ -39,9 +39,9 @@ public class MenuController {
     }
 
     @PostMapping("/Paquera")
-    public String postPaquera(@ModelAttribute Paquera paquera, Model model) {
-        paqueraService.inserirPaquera(paquera);
-        return "sucesso";
+    public String salvarPaquera(@ModelAttribute Paquera paquera) {
+        paqueraService.salvar(paquera);
+        return "redirect:/paqueras";
     }
 
     @GetMapping("/paqueras")
