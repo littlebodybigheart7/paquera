@@ -26,6 +26,8 @@
                 <td th:text="${p.signo}">Signo</td>
                 <td th:text="${p.gostaDe}">Gosta de</td>
                 <td th:text="${p.naoGostaDe}">Não gosta de</td>
+                <form th:action="@{/deletar/{id}(id=${p.id})}" method="post">
+                <button type="submit" class="btn-deletar">🗑️ Deletar</button>
             </tr>
         </tbody>
     </table>
