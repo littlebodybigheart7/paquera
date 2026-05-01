@@ -1,7 +1,6 @@
 body{
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-size: 18px;
-    background-color: #f55083;
     margin: 100px;
     cursor: pointer;
     background-image: url(../img/ape-docete.webp);
@@ -13,7 +12,6 @@ h1{
     color: pink;
     background-color: rgb(255, 255, 255);
     width: 50%;
-    color: #f55083;
 }
 
 h1:hover{
