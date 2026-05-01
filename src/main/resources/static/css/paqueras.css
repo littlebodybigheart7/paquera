@@ -1,11 +1,14 @@
-body{
-    font-family: monospace,'Roboto Mono', 'Segoe UI';
+body {
+    font-family: monospace, 'Roboto Mono', 'Segoe UI';
     font-size: 18px;
     margin: 100px;
     cursor: pointer;
     background-image: url(../img/ape-docete.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
-
 
 h1{
     font-size: 30px;  
