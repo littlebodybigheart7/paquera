@@ -54,5 +54,12 @@ public class MenuController {
     public String deletarPaquera(@PathVariable String id) {
         paqueraService.deletarPaquera(id);
         return "redirect:/paqueras";
+
+    @GetMapping("/editar/{id}")
+    public String editarPaquera(@PathVariable String id, Model model) {
+        Paquera paquera = paqueraService.buscarPorId(id);
+        model.addAttribute("Paquera", paquera);
+        return "formpaquera";
+}
     }
 }
