@@ -38,12 +38,13 @@ a:hover{
 
 button{
     background-color: white;
-    color: palegreen;
+    color: green;
 }
 
 p.cor-lys{
-    color: white;
-    background-color: palegreen;
+    color: green;
+    background-color: white;
     font-weight: bold;
     width: 30%;
+    display: flex;
 }
