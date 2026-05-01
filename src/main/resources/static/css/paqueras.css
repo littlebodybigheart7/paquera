@@ -56,9 +56,9 @@ caption, th, td {
 }
  
 tbody tr:hover{
-    background-color: #EBE8ED;
+    background-color:rgb(255, 114, 185);
 }
 
 tbody{
-    background-color: rgb(255, 181, 222);
+    background-color:#EBE8ED
 }
