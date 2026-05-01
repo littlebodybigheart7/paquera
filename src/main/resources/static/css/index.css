@@ -37,12 +37,12 @@ a:hover{
 
 button{
     background-color: white;
-    color: palevioletred;
+    color: darkred;
 }
 
 p.cor-cast{
-    color: white;
-    background-color: palevioletred;
+    color: darkred;
+    background-color: white;
     font-weight: bold;
     width: 30%;
     display: flex;
