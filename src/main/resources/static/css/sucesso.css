@@ -6,10 +6,17 @@ body {
     background-image: url(../img/cafe-amor-doce.jpg);
 }
 
-p:hover{
+h2{
+    font-size: 30px;
+    color: white;
+    background-color: palevioletred;
+    width: 50%;
+}
+
+h2:hover{
     width: 25%;
     transition: width 2s;
-    color:black
+
 }
 
 img{
@@ -25,9 +32,4 @@ a:hover{
     color: pink;
     text-decoration: underline;
 
-}
-
-h1{
-    color:white;
-    font-weight: bold;
 }
