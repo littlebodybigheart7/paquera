@@ -1,9 +1,14 @@
-body{
-    font-family: monospace,'Roboto Mono', 'Segoe UI';
+body {
+    font-family: monospace, 'Roboto Mono', 'Segoe UI';
     font-size: 18px;
-    background-image: url(../img/parque.jpg) ;
-    margin: 100px;
+    margin: 20px;
     cursor: pointer;
+    background-image: url(../img/parque.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 p:hover{
