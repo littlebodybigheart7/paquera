@@ -7,6 +7,7 @@
 <body>
     <h1>Cadastro de Paqueras</h1>
     <form action="#" th:action="@{/Paquera}" method=post th:object="${Paquera}">
+        <p> <a th:href="@{/}">Voltar</a> </p>
         <p>
             Nome: <input type="text" th:field="*{nome}"><br>
             Idade: <input type="text" th:field="*{idade}"><br>
@@ -15,7 +16,6 @@
             Não gosta de: <input type="text" th:field="*{naoGostaDe}"><br>
             <input type="submit" value="Cadastrar">
             <input type="reset" value="Limpar">
-            <p> <a th:href="@{/index}">Início</a> </p>
         </p>
         </form>
 </body>
