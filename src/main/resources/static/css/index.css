@@ -38,6 +38,7 @@ a:hover{
 button{
     background-color: white;
     color: darkred;
+    border-radius: 10px; 
 }
 
 p.cor-cast{
@@ -46,4 +47,5 @@ p.cor-cast{
     font-weight: bold;
     width: 30%;
     display: flex;
+    border-radius: 10px;
 }
