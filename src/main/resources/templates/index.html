@@ -9,14 +9,18 @@
     <h1>Castiel</h1>
     <p> <a th:href="@{/}">Castiel page</a> | <a th:href="@{/p1}">Lysandre page</a> | <a th:href="@{/p2}">Armin page</a> | <a th:href="@{/formpaquera}">Cadastrar Paquera</a> 
     | <a th:href="@{/paqueras}">Paqueras Cadastrados </a> </p>
+<div class="container">
     <img th:src="@{img/castiel.png}" alt="Castiel divo">
-    <button onclick="ola()">
-        OK
-    </button>
-    <p class="cor-cast">Castiel é um rapaz um pouco difícil. Não é fácil falar com ele ou saber o que ele pensa, mas, 
-    provavelmente, é um cara legal. Apesar do seu mau humor, ele gosta das pessoas que falam sem rodeios.<br>
-    Gosta: A guitarra dele<br>
-    Não gosta: Receber ordens<br>
-    Aniversário: 12/08</p>
+    <div class="conteudo">
+        <button onclick="ola()">OK</button>
+        <p class="cor-cast">
+            Castiel é um rapaz um pouco difícil. Não é fácil falar com ele ou saber o que ele pensa, mas, 
+            provavelmente, é um cara legal. Apesar do seu mau humor, ele gosta das pessoas que falam sem rodeios.<br>
+            Gosta: A guitarra dele<br>
+            Não gosta: Receber ordens<br>
+            Aniversário: 12/08
+        </p>
+    </div>
+</div>
 </body>
 </html>
