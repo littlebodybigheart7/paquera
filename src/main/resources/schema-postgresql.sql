@@ -6,5 +6,6 @@ CREATE TABLE paquera(
     idade VARCHAR(11) NOT NULL,
     signo VARCHAR(20),
     gostade VARCHAR(255),
-    naogostade VARCHAR(255)
+    naogostade VARCHAR(255),
+    foto VARCHAR(500)
 );
