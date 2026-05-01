@@ -18,20 +18,32 @@
                 <th>Signo</th>
                 <th>Gosta de</th>
                 <th>Não gosta de</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="p : ${paqueras}">
-                <td><img th:if="${p.foto != null and !p.foto.isEmpty()}" th:src="${p.foto}" alt="Foto"></td>
-                <img th:if="${p.foto == null or p.foto.isEmpty()}" src="https://via.placeholder.com/100" alt="Sem foto">
-                <td th:text="${p.nome}">Nome</td>
-                <td th:text="${p.idade}">Idade</td>
-                <td th:text="${p.signo}">Signo</td>
-                <td th:text="${p.gostaDe}">Gosta de</td>
-                <td th:text="${p.naoGostaDe}">Não gosta de</td>
-                <form th:action="@{/deletar/{id}(id=${p.id})}" method="post">
-                <td><button type="submit" class="btn-deletar">🗑️ Deletar</button></td>
-            </tr>
+    <td>
+        <img th:if="${p.foto != null and !p.foto.isEmpty()}" th:src="${p.foto}" alt="Foto">
+        <img th:if="${p.foto == null or p.foto.isEmpty()}" src="https://via.placeholder.com/100">
+    </td>
+
+    <td th:text="${p.nome}"></td>
+    <td th:text="${p.idade}"></td>
+    <td th:text="${p.signo}"></td>
+    <td th:text="${p.gostaDe}"></td>
+    <td th:text="${p.naoGostaDe}"></td>
+
+    <td>
+        <a th:href="@{/editar/{id}(id=${p.id})}">
+            <button type="button">✏️ Editar</button>
+        </a>
+
+        <form th:action="@{/deletar/{id}(id=${p.id})}" method="post" style="display:inline;">
+            <button type="submit" class="btn-deletar">🗑️ Deletar</button>
+        </form>
+    </td>
+</tr>
         </tbody>
     </table>
 </body>
