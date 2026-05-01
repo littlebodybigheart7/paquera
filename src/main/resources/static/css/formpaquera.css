@@ -31,13 +31,13 @@ p{
 }
 
 a{
-    color: pink;
+    color: white;
     background-color: #f55083;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
 }
 
 a:hover{
-    color: white;
+    color: pink;
 }
 
