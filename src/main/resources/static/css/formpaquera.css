@@ -25,12 +25,12 @@ img{
     width: 200px;
 }
 
-a{
+p{
     color: palevioletred;
     font-weight: bold;
 }
 
-a:hover{
+form:hover{
     color: pink;
     text-decoration: underline;
 
