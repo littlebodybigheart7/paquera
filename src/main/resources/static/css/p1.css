@@ -39,6 +39,7 @@ a:hover{
 button{
     background-color: white;
     color: green;
+    border-radius: 10px; 
 }
 
 p.cor-lys{
@@ -47,4 +48,5 @@ p.cor-lys{
     font-weight: bold;
     width: 30%;
     display: flex;
+    border-radius: 10px; 
 }
