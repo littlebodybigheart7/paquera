@@ -35,3 +35,26 @@ a:hover{
     text-decoration: underline;
 
 }
+
+table {
+    font-size: 20px;
+    text-align: left;
+    border-collapse: collapse;
+    width: 700px;
+}
+ 
+thead {
+    background-color: palevioletred;
+}
+ 
+th, td {
+    border: 1px solid black;
+}
+ 
+caption, th, td {
+    padding: 10px;
+}
+ 
+tbody tr:hover{
+    background-color: #EBE8ED;
+}
