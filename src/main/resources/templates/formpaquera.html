@@ -7,6 +7,8 @@
 <body>
     <h1>Cadastro de Paqueras</h1>
     <form action="#" th:action="@{/Paquera}" method=post th:object="${Paquera}">
+        <input type="hidden" th:field="*{id}">
+        
         <a th:href="@{/}">Cancelar</a>
         <p>
             Nome: <input type="text" th:field="*{nome}" required><br>
