@@ -45,8 +45,8 @@ p.cor-cast{
     color: darkred;
     background-color: white;
     font-weight: bold;
-    width: 30%;
-    display: flex;
+    width: auto;
+    padding: 10px;
     border-radius: 10px;
 }
 
