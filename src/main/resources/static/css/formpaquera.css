@@ -22,9 +22,10 @@ img{
     width: 200px;
 }
 
-p{
+a{
     color: pink;
     background-color: palevioletred;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
 }
+
