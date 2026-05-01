@@ -24,7 +24,9 @@ img{
 }
 
 a{
-    color: palevioletred;
+    color: pink;
+    background-color: palevioletred;
+    font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
 }
 
