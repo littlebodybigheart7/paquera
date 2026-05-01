@@ -60,6 +60,5 @@ public class MenuController {
         Paquera paquera = paqueraService.buscarPorId(id);
         model.addAttribute("Paquera", paquera);
         return "formpaquera";
-}
     }
 }
