@@ -26,22 +26,23 @@ img{
 }
 
 a{
-    color: palevioletred;
+    color: pink;
     font-weight: bold;
 }
 
 a:hover{
-    color: pink;
+    color: white;
     text-decoration: underline;
-
 }
 
 button{
-    color: white;
-    background-color: #f55083;
+    background-color: white;
+    color: palevioletred;
 }
 
 p.cor-cast{
     color: white;
+    background-color: palevioletred;
     font-weight: bold;
+    width: 30%;
 }
