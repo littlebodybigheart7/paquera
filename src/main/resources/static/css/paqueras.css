@@ -24,19 +24,20 @@ img{
 }
 
 a{
-    color: pink;
+    color: white;
     background-color: #f55083;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
 }
 
 a:hover{
-    color: white;
+    color: pink;
     text-decoration: underline;
 
 }
 
 table {
+    color: black;
     font-size: 20px;
     text-align: left;
     border-collapse: collapse;
