@@ -26,4 +26,8 @@ public class PaqueraService {
     public ArrayList<Paquera> listarPaqueras() {
         return paqueraDAO.listarPaqueras();
     }
+
+    public Paquera buscarPorId(String id) {
+        return repository.findById(id).orElseThrow();
+    }
 }
