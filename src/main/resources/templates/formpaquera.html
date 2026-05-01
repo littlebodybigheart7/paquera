@@ -3,13 +3,18 @@
 <head>
     <title>Cadastro de Paqueras</title>
     <link rel="stylesheet" th:href="@{css/formpaquera.css}">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
+    <h1>Cadastro de Paqueras</h1>
     <form action="#" th:action="@{/Paquera}" method=post th:object="${Paquera}">
-    	Nome: <input type="text" th:field="*{nome}"><br>
-        Idade: <input type="text" th:field="*{idade}">
-    	<input type="submit" value="Cadastrar">
-    </form>
+        <p>
+            Nome: <input type="text" th:field="*{nome}"><br>
+            Idade: <input type="text" th:field="*{idade}"><br>
+            Signo: <input type="text" th:field="*{signo}"><br>
+            Gosta de: <input type="text" th:field="*{gostaDe}"><br>
+            Não gosta de: <input type="text" th:field="*{naoGostaDe}"><br>
+            <input type="submit" value="Cadastrar">
+        </p>
+        </form>
 </body>
 </html>
