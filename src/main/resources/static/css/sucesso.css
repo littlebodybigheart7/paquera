@@ -1,9 +1,9 @@
 body {
     font-family: monospace, 'Roboto Mono', 'Segoe UI';
     font-size: 18px;
-    margin: 1000px;
+    margin: 100px;
     cursor: pointer;
-    background-image: url(../img/parque.jpg);
+    background-image: url(../img/cafe-amor-doce.jpg);
 }
 
 p:hover{
