@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.aula1.model.Paquera;
@@ -31,7 +32,6 @@ public class MenuController {
         return "p2";
     }
 
-    // Sem esse GET o Thymeleaf não consegue montar o th:object="${Paquera}"
     @GetMapping("/formpaquera")
     public String formularioPaquera(Model model) {
         model.addAttribute("Paquera", new Paquera());
@@ -48,5 +48,11 @@ public class MenuController {
     public String listarPaqueras(Model model) {
         model.addAttribute("paqueras", paqueraService.listarPaqueras());
         return "paqueras";
+    }
+
+    @PostMapping("/deletar/{id}")
+    public String deletarPaquera(@PathVariable String id) {
+        paqueraService.deletarPaquera(id);
+        return "redirect:/paqueras";
     }
 }
