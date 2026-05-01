@@ -1,10 +1,9 @@
 body{
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-size: 18px;
-    background-color: darkred;
     margin: 100px;
     cursor: pointer;
-
+    background-image: url(Sala-dos-representantes.png);
 }
 
 h1{
@@ -12,7 +11,7 @@ h1{
     color: pink;
     background-color: palevioletred;
     width: 50%;
-    color: rgb(175, 15, 15);
+    color: #f55083
 }
 
 h1:hover{
