@@ -9,29 +9,25 @@ import org.springframework.stereotype.Service;
 public class PaqueraService {
 
     @Autowired
-    PaqueraDAO paqueraDAO;
+    private PaqueraDAO paqueraDAO;
 
-    public void inserirPaquera(Paquera paquera) {
+    // CREATE ou UPDATE
+    public void salvar(Paquera paquera) {
         paqueraDAO.inserirPaquera(paquera);
     }
 
+    // DELETE
     public void deletarPaquera(String uuid) {
         paqueraDAO.deletarPaquera(uuid);
     }
 
-    public Paquera mostrarPaquera(String uuid) {
-        return paqueraDAO.mostrarPaquera(uuid);
+    // READ (um só)
+    public Paquera buscarPorId(String id) {
+        return paqueraDAO.mostrarPaquera(id);
     }
 
+    // READ (lista)
     public ArrayList<Paquera> listarPaqueras() {
         return paqueraDAO.listarPaqueras();
     }
-
-    public Paquera buscarPorId(String id) {
-        return repository.findById(id).orElseThrow();
-    }
-
-    public void salvar(Paquera paquera) {
-        repository.save(paquera);
-}
 }
