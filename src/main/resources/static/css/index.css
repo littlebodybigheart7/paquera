@@ -40,3 +40,8 @@ button{
     color: white;
     background-color: #f55083;
 }
+
+p.cor-cast{
+    color: white;
+    font-weight: bold;
+}
