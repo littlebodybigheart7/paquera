@@ -12,6 +12,7 @@
     <table th:if="${not #lists.isEmpty(paqueras)}">
         <thead>
             <tr>
+                <th>Imagem</th>
                 <th>Nome</th>
                 <th>Idade</th>
                 <th>Signo</th>
@@ -21,8 +22,8 @@
         </thead>
         <tbody>
             <tr th:each="p : ${paqueras}">
-                <img th:if="${p.foto != null and !p.foto.isEmpty()}" th:src="${p.foto}" alt="Foto">
-                <img th:if="${p.foto == null or p.foto.isEmpty()}" src="https://via.placeholder.com/100" alt="Sem foto">
+                <td><img th:if="${p.foto != null and !p.foto.isEmpty()}" th:src="${p.foto}" alt="Foto"></td>
+                <td><img th:if="${p.foto == null or p.foto.isEmpty()}" src="https://via.placeholder.com/100" alt="Sem foto"></td>
                 <td th:text="${p.nome}">Nome</td>
                 <td th:text="${p.idade}">Idade</td>
                 <td th:text="${p.signo}">Signo</td>
