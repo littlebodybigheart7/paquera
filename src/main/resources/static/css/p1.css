@@ -31,7 +31,19 @@ a{
 }
 
 a:hover{
-    color: green;
+    color: white;
     text-decoration: underline;
 
+}
+
+button{
+    background-color: white;
+    color: palegreen;
+}
+
+p.cor-lys{
+    color: white;
+    background-color: palegreen;
+    font-weight: bold;
+    width: 30%;
 }
