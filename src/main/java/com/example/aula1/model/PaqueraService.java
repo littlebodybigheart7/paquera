@@ -30,4 +30,8 @@ public class PaqueraService {
     public Paquera buscarPorId(String id) {
         return repository.findById(id).orElseThrow();
     }
+
+    public void salvar(Paquera paquera) {
+        repository.save(paquera);
+}
 }
