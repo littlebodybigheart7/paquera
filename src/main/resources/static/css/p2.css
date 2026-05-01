@@ -39,6 +39,7 @@ a:hover{
 button{
     background-color: white;
     color: paleturquoise;
+    border-radius: 10px; 
 }
 
 p.cor-armin{
@@ -47,4 +48,5 @@ p.cor-armin{
     font-weight: bold;
     width: 30%;
     display: flex;
+    border-radius: 10px; 
 }
