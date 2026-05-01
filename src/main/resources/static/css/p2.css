@@ -42,8 +42,9 @@ button{
 }
 
 p.cor-armin{
-    color: white;
-    background-color: paleturquoise;
+    color: darkblue;
+    background-color: white;
     font-weight: bold;
     width: 30%;
+    display: flex;
 }
