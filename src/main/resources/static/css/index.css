@@ -45,4 +45,5 @@ p.cor-cast{
     background-color: palevioletred;
     font-weight: bold;
     width: 30%;
+    display: flex;
 }
