@@ -42,6 +42,7 @@ button{
 }
 
 p.cor-cast{
+    margin: 100px;
     color: darkred;
     background-color: white;
     font-weight: bold;
