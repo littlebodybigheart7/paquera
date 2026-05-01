@@ -9,16 +9,21 @@ import org.springframework.stereotype.Service;
 public class PaqueraService {
 
     @Autowired
-    PaqueraDAO PaqueraDAO;
+    PaqueraDAO paqueraDAO;
 
-    public void inserirPaquera(Paquera Paquera){
-        PaqueraDAO.inserirPaquera(Paquera);
-    }
-     public Paquera mostrarPaquera(String uuid){
-        return PaqueraDAO.mostrarPaquera(uuid);
+    public void inserirPaquera(Paquera paquera) {
+        paqueraDAO.inserirPaquera(paquera);
     }
 
-    public ArrayList<Paquera> listarPaqueras(){
-        return PaqueraDAO.listarPaqueras();
+    public void deletarPaquera(String uuid) {
+        paqueraDAO.deletarPaquera(uuid);
+    }
+
+    public Paquera mostrarPaquera(String uuid) {
+        return paqueraDAO.mostrarPaquera(uuid);
+    }
+
+    public ArrayList<Paquera> listarPaqueras() {
+        return paqueraDAO.listarPaqueras();
     }
 }
