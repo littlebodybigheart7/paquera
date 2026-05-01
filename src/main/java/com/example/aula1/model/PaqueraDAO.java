@@ -17,6 +17,9 @@ public class PaqueraDAO {
         Object[] obj = new Object[2];
         obj[0] = paquera.getNome();
         obj[1] = paquera.getIdade();
+        obj[2] = paquera.getSigno();
+        obj[3] = paquera.getGostaDe();
+        obj[4] = paquera.getNaoGostaDe();
         jdbc.update(sql, obj);
     }
 
