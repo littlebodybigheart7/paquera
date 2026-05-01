@@ -40,6 +40,7 @@ button{
     background-color: white;
     color: green;
     border-radius: 10px; 
+    font-weight: bold;
 }
 
 p.cor-lys{
