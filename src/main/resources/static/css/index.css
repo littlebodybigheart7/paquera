@@ -39,6 +39,7 @@ button{
     background-color: white;
     color: darkred;
     border-radius: 10px; 
+    font-weight: bold;
 }
 
 p.cor-cast{
