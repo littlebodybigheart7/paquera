@@ -46,7 +46,18 @@ p.cor-lys{
     color: green;
     background-color: white;
     font-weight: bold;
-    width: 30%;
-    display: flex;
+    width: auto;
+    padding: 10px;
     border-radius: 10px; 
+}
+
+.container{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
 }
