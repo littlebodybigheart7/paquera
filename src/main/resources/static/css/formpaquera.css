@@ -22,9 +22,16 @@ img{
     width: 200px;
 }
 
+p{
+    color: pink;
+    background-color: white;
+    font-family: monospace,'Roboto Mono', 'Segoe UI';
+    font-weight: bold;
+}
+
 a{
     color: pink;
-    background-color: palevioletred;
+    background-color: #f55083;
     font-family: monospace,'Roboto Mono', 'Segoe UI';
     font-weight: bold;
 }
