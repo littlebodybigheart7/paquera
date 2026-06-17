@@ -44,7 +44,18 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
+		<!-- Spring Security (login) -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		<!-- Integração do Thymeleaf com o Spring Security (tag sec:authorize) -->
+		<dependency>
+		    <groupId>org.thymeleaf.extras</groupId>
+		    <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+		</dependency>
+		
 		<!-- Testes -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
