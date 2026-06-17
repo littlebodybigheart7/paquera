@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Paqueras - Cadastro</title>
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body class="auth-body">
+    <div class="auth-card">
+        <h1>Paqueras</h1>
+        <p class="muted">Crie sua conta</p>
+
+        <div th:if="${erro}" class="alert-error" th:text="${erro}"></div>
+
+        <form th:action="@{/cadastro}" th:object="${usuario}" method="post">
+            <label for="nome">Usuário</label>
+            <input id="nome" type="text" th:field="*{nome}" required autofocus>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" th:field="*{email}">
+
+            <label for="password">Senha</label>
+            <input id="password" type="password" th:field="*{password}" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <p class="muted small">
+            Já tem conta? <a th:href="@{/login}">Entrar</a>
+        </p>
+    </div>
+</body>
+</html>
