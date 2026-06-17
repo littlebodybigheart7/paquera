@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org/">
+<html xmlns:th="http://www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <title>Amor Doce Paqueras</title>
     <link rel="stylesheet" th:href="@{css/index.css}">
@@ -7,8 +7,11 @@
 </head>
 <body>
     <h1>Castiel</h1>
-    <p> <a th:href="@{/}">Castiel page</a> | <a th:href="@{/p1}">Lysandre page</a> | <a th:href="@{/p2}">Armin page</a> | <a th:href="@{/formpaquera}">Cadastrar Paquera</a> 
-    | <a th:href="@{/paqueras}">Paqueras Cadastrados </a> </p>
+ <p> <a th:href="@{/}">Castiel page</a> | <a th:href="@{/p1}">Lysandre page</a> | <a th:href="@{/p2}">Armin page</a> | <a th:href="@{/formpaquera}">Cadastrar Paquera</a> 
+| <a th:href="@{/paqueras}">Paqueras Cadastrados </a>
+| <span sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Sair</a></span>
+<span sec:authorize="!isAuthenticated()"><a th:href="@{/login}">Entrar</a> / <a th:href="@{/cadastro}">Cadastrar-se</a></span>
+</p>
 <div class="container">
     <img th:src="@{img/castiel.png}" alt="Castiel divo">
     <div class="conteudo">
