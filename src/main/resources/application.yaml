@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d8pg1p9194ac739ae2t0-a/bancopaquera
-    username: bancopaquera_user
-    password: Ihi08bQ45RjmNNOQMhKXwt744Lvzh8Y0
+    url: ${DATABASE_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
  
   sql:
