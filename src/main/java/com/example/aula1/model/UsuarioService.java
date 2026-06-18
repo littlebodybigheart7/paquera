@@ -16,4 +16,8 @@ public class UsuarioService {
     public boolean usuarioJaExiste(String nome) {
         return usuarioDAO.existeUsuario(nome);
     }
+
+    public String obterIdPorNome(String nome) {
+        return usuarioDAO.obterIdPorNome(nome);
+    }
 }
