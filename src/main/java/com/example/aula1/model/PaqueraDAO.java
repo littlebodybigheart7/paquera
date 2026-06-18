@@ -13,9 +13,9 @@ public class PaqueraDAO {
     private JdbcTemplate jdbc;
 
     // INSERT
-    public void inserirPaquera(Paquera paquera) {
-        String sql = "INSERT INTO paquera(id, nome, idade, signo, gostade, naogostade, foto) VALUES (gen_random_uuid(), ?, ?, ?, ?, ?, ?)";
-        
+    public void inserirPaquera(Paquera paquera, String usuarioId) {
+    String sql = "INSERT INTO paquera(id, nome, idade, signo, gostade, naogostade, foto, usuario_id) " +
+                 "VALUES (gen_random_uuid(), ?, ?, ?, ?, ?, ?, ?::uuid)";
         Object[] obj = new Object[6];
         obj[0] = paquera.getNome();
         obj[1] = paquera.getIdade();
@@ -24,7 +24,10 @@ public class PaqueraDAO {
         obj[4] = paquera.getNaoGostaDe();
         obj[5] = paquera.getFoto();
 
-        jdbc.update(sql, obj);
+        jdbc.update(sql,
+            paquera.getNome(), paquera.getIdade(), paquera.getSigno(),
+            paquera.getGostaDe(), paquera.getNaoGostaDe(), paquera.getFoto(),
+            usuarioId);
     }
 
     // UPDATE
