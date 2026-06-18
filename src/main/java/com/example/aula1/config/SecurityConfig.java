@@ -29,7 +29,7 @@ public class SecurityConfig {
         );
 
         manager.setAuthoritiesByUsernameQuery(
-            "SELECT nome, 'ROLE_USER' as authority FROM usuario WHERE nome = ?"
+            "SELECT nome, cargo FROM usuario WHERE nome = ?"
         );
 
         return manager;
