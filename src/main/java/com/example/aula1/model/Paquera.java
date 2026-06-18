@@ -7,9 +7,11 @@ import java.util.UUID;
 
 public class Paquera {
 
-    private String id, nome, idade, signo, gostaDe, naoGostaDe, foto;
+    private String id, nome, idade, signo, gostaDe, naoGostaDe, foto, usuarioId;
 
     public Paquera() {}
+    public String getUsuarioId() { return usuarioId; }
+    public void setUsuarioId(String usuarioId) { this.usuarioId = usuarioId; }
 
     public Paquera(String id, String nome, String idade, String signo, String gostaDe, String naoGostaDe, String foto) {
         this.id = id;
@@ -45,6 +47,11 @@ public class Paquera {
         String gostaDe = (String) registro.get("gostade");
         String naoGostaDe = (String) registro.get("naogostade");
         String foto = (String) registro.get("foto");
+        Object uidObj = registro.get("usuario_id");
+        String usuarioId = uidObj != null ? uidObj.toString() : null;
+        Paquera p = new Paquera(id.toString(), nome, idade, signo, gostaDe, naoGostaDe, foto);
+        p.setUsuarioId(usuarioId);
+        return p;
         return new Paquera(id.toString(), nome, idade, signo, gostaDe, naoGostaDe, foto);
     }
 
