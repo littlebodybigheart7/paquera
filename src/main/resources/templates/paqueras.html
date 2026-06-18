@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <title>Lista de Paqueras</title>
     <link rel="stylesheet" th:href="@{/css/paqueras.css}">
@@ -7,8 +8,16 @@
 </head>
 <body>
     <h1>Paqueras Cadastrados</h1>
-    <p> <a th:href="@{/}">Castiel page</a> | <a th:href="@{/p1}">Lysandre page</a> | <a th:href="@{/p2}">Armin page</a> | <a th:href="@{/formpaquera}">Cadastrar Paquera</a> 
-    | <a th:href="@{/paqueras}">Paqueras Cadastrados </a> </p>
+    <p>
+        <a th:href="@{/}">Castiel page</a> |
+        <a th:href="@{/p1}">Lysandre page</a> |
+        <a th:href="@{/p2}">Armin page</a> |
+        <span th:if="${isLoggedIn}"><a th:href="@{/formpaquera}">Cadastrar Paquera</a> | </span>
+        <a th:href="@{/paqueras}">Paqueras Cadastrados</a> |
+        <span th:if="${isLoggedIn}"><a th:href="@{/logout}">Sair</a></span>
+        <span th:if="${!isLoggedIn}"><a th:href="@{/login}">Entrar</a> / <a th:href="@{/cadastro}">Cadastrar-se</a></span>
+    </p>
+
     <table th:if="${not #lists.isEmpty(paqueras)}">
         <thead>
             <tr>
@@ -18,33 +27,35 @@
                 <th>Signo</th>
                 <th>Gosta de</th>
                 <th>Não gosta de</th>
-                <th>Ações</th>
+                <th th:if="${isLoggedIn}">Ações</th>
             </tr>
         </thead>
         <tbody>
             <tr th:each="p : ${paqueras}">
-    <td>
-        <img th:if="${p.foto != null and !p.foto.isEmpty()}" th:src="${p.foto}" alt="Foto">
-        <img th:if="${p.foto == null or p.foto.isEmpty()}" src="https://via.placeholder.com/100">
-    </td>
+                <td>
+                    <img th:if="${p.foto != null and !p.foto.isEmpty()}" th:src="${p.foto}" alt="Foto">
+                    <img th:if="${p.foto == null or p.foto.isEmpty()}" src="https://via.placeholder.com/100">
+                </td>
+                <td th:text="${p.nome}"></td>
+                <td th:text="${p.idade}"></td>
+                <td th:text="${p.signo}"></td>
+                <td th:text="${p.gostaDe}"></td>
+                <td th:text="${p.naoGostaDe}"></td>
 
-    <td th:text="${p.nome}"></td>
-    <td th:text="${p.idade}"></td>
-    <td th:text="${p.signo}"></td>
-    <td th:text="${p.gostaDe}"></td>
-    <td th:text="${p.naoGostaDe}"></td>
-
-    <td>
-        <a th:href="@{/editar/{id}(id=${p.id})}">
-            <button type="button">✏️ Editar</button><br>
-        </a>
-
-        <form th:action="@{/deletar/{id}(id=${p.id})}" method="post" style="display:inline;">
-            <button type="submit" class="btn-deletar">🗑️ Deletar</button>
-        </form>
-    </td>
-</tr>
+                <td th:if="${isLoggedIn}">
+                    <th:block th:if="${isAdmin or (usuarioId != null and usuarioId == p.usuarioId)}">
+                        <a th:href="@{/editar/{id}(id=${p.id})}">
+                            <button type="button">✏️ Editar</button>
+                        </a><br>
+                        <form th:action="@{/deletar/{id}(id=${p.id})}" method="post" style="display:inline;">
+                            <button type="submit" class="btn-deletar">🗑️ Deletar</button>
+                        </form>
+                    </th:block>
+                </td>
+            </tr>
         </tbody>
     </table>
+
+    <p th:if="${#lists.isEmpty(paqueras)}">Nenhum paquera cadastrado ainda.</p>
 </body>
 </html>
