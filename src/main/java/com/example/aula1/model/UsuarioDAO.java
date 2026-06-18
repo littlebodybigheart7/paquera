@@ -1,5 +1,8 @@
 package com.example.aula1.model;
 
+import java.util.Map;
+import java.util.UUID;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +29,7 @@ public class UsuarioDAO {
     }
 
     public void inserirUsuario(Usuario usuario) {
-        String sql = "INSERT INTO usuario(nome, email, password) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO usuario(nome, email, password, cargo) VALUES (?, ?, ?, 'ROLE_USER')";
         jdbc.update(sql,
             usuario.getNome(),
             usuario.getEmail(),
@@ -38,5 +41,12 @@ public class UsuarioDAO {
         String sql = "SELECT COUNT(*) FROM usuario WHERE nome = ?";
         Integer count = jdbc.queryForObject(sql, Integer.class, nome);
         return count != null && count > 0;
+    }
+
+    public String obterIdPorNome(String nome) {
+        String sql = "SELECT id FROM usuario WHERE nome = ?";
+        Map<String, Object> mp = jdbc.queryForMap(sql, nome);
+        UUID id = (UUID) mp.get("id");
+        return id.toString();
     }
 }
