@@ -10,8 +10,6 @@ public class Paquera {
     private String id, nome, idade, signo, gostaDe, naoGostaDe, foto, usuarioId;
 
     public Paquera() {}
-    public String getUsuarioId() { return usuarioId; }
-    public void setUsuarioId(String usuarioId) { this.usuarioId = usuarioId; }
 
     public Paquera(String id, String nome, String idade, String signo, String gostaDe, String naoGostaDe, String foto) {
         this.id = id;
@@ -30,6 +28,7 @@ public class Paquera {
     public String getGostaDe() { return gostaDe; }
     public String getNaoGostaDe() { return naoGostaDe; }
     public String getFoto() { return foto; }
+    public String getUsuarioId() { return usuarioId; }
 
     public void setId(String id) { this.id = id; }
     public void setNome(String nome) { this.nome = nome; }
@@ -38,6 +37,7 @@ public class Paquera {
     public void setGostaDe(String gostaDe) { this.gostaDe = gostaDe; }
     public void setNaoGostaDe(String naoGostaDe) { this.naoGostaDe = naoGostaDe; }
     public void setFoto(String foto) { this.foto = foto; }
+    public void setUsuarioId(String usuarioId) { this.usuarioId = usuarioId; }
 
     public static Paquera converter(Map<String, Object> registro) {
         UUID id = (UUID) registro.get("id");
@@ -49,10 +49,10 @@ public class Paquera {
         String foto = (String) registro.get("foto");
         Object uidObj = registro.get("usuario_id");
         String usuarioId = uidObj != null ? uidObj.toString() : null;
+
         Paquera p = new Paquera(id.toString(), nome, idade, signo, gostaDe, naoGostaDe, foto);
         p.setUsuarioId(usuarioId);
         return p;
-        return new Paquera(id.toString(), nome, idade, signo, gostaDe, naoGostaDe, foto);
     }
 
     public static ArrayList<Paquera> converterTodos(List<Map<String, Object>> registros) {
