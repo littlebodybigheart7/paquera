@@ -12,13 +12,13 @@ public class PaqueraService {
     private PaqueraDAO paqueraDAO;
 
     // CREATE ou UPDATE
-    public void salvar(Paquera paquera) {
-        if (paquera.getId() == null || paquera.getId().isEmpty()) {
-            paqueraDAO.inserirPaquera(paquera);
-        } else {
-            paqueraDAO.atualizarPaquera(paquera);
-        }
+public void salvar(Paquera paquera, String usuarioId) {
+    if (paquera.getId() == null || paquera.getId().isEmpty()) {
+        paqueraDAO.inserirPaquera(paquera, usuarioId);
+    } else {
+        paqueraDAO.atualizarPaquera(paquera);
     }
+}
 
     // DELETE
     public void deletarPaquera(String uuid) {
